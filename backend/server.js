@@ -8,6 +8,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+const PORT = process.env.PORT || 3000;
+
 app.post("/gerar", async (req, res) => {
     try {
         const texto = req.body.texto;
@@ -65,10 +67,11 @@ app.post("/gerar", async (req, res) => {
     }
 });
 
-app.listen(3000, () => {
-    console.log("Rodando em http://localhost:3000");
-});
 
 app.get("/", (req, res) => {
     res.send("OK 🔥");
+});
+
+app.listen(PORT, () => {
+    console.log(`Servidor rodando na porta ${PORT}`);
 });
