@@ -67,12 +67,6 @@ app.post("/gerar", async (req, res) => {
     }
 });
 
-
-app.get("/", (req, res) => {
-    res.send("OK 🔥");
-});
-
-
 app.get("/teste", (req, res) => {
     res.send("Rota de teste funcionando ✅");
 });
