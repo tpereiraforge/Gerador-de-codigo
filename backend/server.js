@@ -75,3 +75,6 @@ app.get("/", (req, res) => {
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
 });
+app.get("/teste", (req, res) => {
+    res.send("Rota de teste funcionando ✅");
+});
