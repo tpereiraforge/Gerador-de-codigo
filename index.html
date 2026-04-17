@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPC Generator</title>
+
+    <!-- ===================== FONTES ===================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- ===================== CSS ===================== -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ===================== HEADER ===================== -->
+    <header>
+        <h1>
+            TPC'AI <span>Gerador</span>
+            <span class="engrenagem">⚙️</span>
+        </h1>
+        
+        <p>Crie formas em HTML e CSS com apenas um clique ✨</p>
+    </header>
+
+    <!-- ===================== INPUT ===================== -->
+    <section class="entrada-codigo">
+        <textarea rows="3" class="caixa-texto" placeholder="Ex: Bola azul pingando"></textarea>
+        <button class="botao-gerar">Gerar Código ⚙️</button>
+
+        <div class="exemplos">
+            <button>Bola quicando</button>
+            <button>Quadrado girando</button>
+            <button>Texto neon</button>
+        </div>
+
+        <button class="copiar">📋 Copiar código</button>
+    </section>
+
+    <!-- ===================== TOGGLE TEMA ===================== -->
+    <label class="switch">
+        <input type="checkbox" id="tema-toggle">
+        <span class="slider"></span>
+    </label>
+
+    <!-- ===================== RESULTADO ===================== -->
+    <section class="resultado">
+        <div class="codigo-container">
+            <h2>Código</h2>
+            <p class="bloco-codigo"></p>
+        </div>
+        <div class="preview-container">
+            <h2>Preview</h2>
+            <iframe class="resultado-codigo"></iframe>
+        </div>
+    </section>
+
+    <!-- ===================== MÚSICA ===================== -->
+    <button class="musica-btn">🎵 Música</button>
+    <audio id="musica" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- ===================== SCRIPT ===================== -->
+    <script src="scripts.js"></script>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer>
+        <p>© 2026 • Desenvolvido por Thiago Pereira</p>
+        <p>Projeto baseado em aulas da DevClub</p>
+    </footer>
+
+</body>
+
+</html>
