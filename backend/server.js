@@ -72,9 +72,7 @@ app.get("/", (req, res) => {
     res.send("OK 🔥");
 });
 
-app.listen(PORT, () => {
-    console.log(`Servidor rodando na porta ${PORT}`);
-});
+
 app.get("/teste", (req, res) => {
     res.send("Rota de teste funcionando ✅");
 });
