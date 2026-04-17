@@ -13,7 +13,7 @@ const botaoMusica = document.querySelector(".musica-btn");
 /* ===================== FUNÇÃO: GERAR CÓDIGO ===================== */
 async function gerarCodigo() {
     try {
-        const resposta = await fetch("http://localhost:3000/gerar", {
+        const resposta = await fetch("https://tpc-backend-97nh.onrender.com/gerar", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
