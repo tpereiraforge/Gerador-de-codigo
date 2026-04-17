@@ -51,19 +51,22 @@ async function gerarCodigo() {
 /* ===================== EVENTOS ===================== */
 
 // Gerar código ao clicar
-botaoGerar.addEventListener("click", () => {
-    gerarCodigo();
+if (botaoGerar) {
+    botaoGerar.addEventListener("click", () => {
 
-    // Animação engrenagem ao gerar código
-    engrenagem.classList.add("ativa");
-    setTimeout(() => {
-        engrenagem.classList.remove("ativa");
-    }, 2000);
+        gerarCodigo(); // 👈 FALTAVA ISSO TAMBÉM
 
-    // Tocar música se estiver pausada
-    if (musica.paused) musica.play();
-});
+        // Animação engrenagem ao gerar código
+        engrenagem.classList.add("ativa");
+        setTimeout(() => {
+            engrenagem.classList.remove("ativa");
+        }, 2000);
 
+        // Tocar música se estiver pausada
+        if (musica.paused) musica.play();
+
+    });
+}
 // Toggle tema claro/escuro
 toggleTema?.addEventListener("change", () => {
     document.body.classList.toggle("light");
