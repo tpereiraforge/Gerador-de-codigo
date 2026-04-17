@@ -30,7 +30,10 @@ async function gerarCodigo() {
         const dados = await resposta.json();
 
         // 🔥 PEGA A RESPOSTA CERTA
-        const codigo = dados.choices?.[0]?.message?.content;
+        let codigo = dados.choices?.[0]?.message?.content;
+
+// remove ```html e ```
+codigo = codigo.replace(/```html/g, "").replace(/```/g, "").trim();
 
         if (!codigo) {
             blocoCodigo.textContent = "Erro: resposta vazia";
